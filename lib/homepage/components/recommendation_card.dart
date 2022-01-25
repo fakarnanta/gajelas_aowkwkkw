@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:layarin_mvp/detail_screen.dart';
-import 'constant.dart';
+import 'package:layarin_mvp/homepage/detail_screen.dart';
+import 'package:layarin_mvp/constant.dart';
 
 class RecomendsTrip extends StatelessWidget {
   const RecomendsTrip({

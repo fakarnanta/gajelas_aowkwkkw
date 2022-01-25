@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:layarin_mvp/home_page.dart';
+import 'package:layarin_mvp/homepage/home_page.dart';
+import 'package:layarin_mvp/loginpage/login_page.dart';
 import 'dart:async';
-import 'package:layarin_mvp/login_page.dart';
+import 'constant.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'layarin',
-        theme: ThemeData(fontFamily: 'Cairo'),
-        home: const HomePage());
+        theme: ThemeData(
+            fontFamily: 'Cairo',
+            primaryColor: kPrimaryColor,
+            textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            scaffoldBackgroundColor: const Color(0xFFEFEFEF)),
+        home: HomePage());
   }
 }
 

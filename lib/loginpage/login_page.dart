@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
-import 'package:layarin_mvp/home_page.dart';
+import 'package:layarin_mvp/homepage/home_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const users = {

@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "734878212762",
+    "project_id": "hub-nusantara",
+    "storage_bucket": "hub-nusantara.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734878212762:android:367996392614354f3bf523",
+        "android_client_info": {
+          "package_name": "com.hubnusantara.lifentrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734878212762-c2s33qb1shla5l4doglhvubrlhaisnp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEtgtjtg67oZE1HXXO21DOtrdoSKHvorE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734878212762-c2s33qb1shla5l4doglhvubrlhaisnp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734878212762:android:9f79df3021e170ad3bf523",
+        "android_client_info": {
+          "package_name": "com.hubnusantara.partner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734878212762-c2s33qb1shla5l4doglhvubrlhaisnp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEtgtjtg67oZE1HXXO21DOtrdoSKHvorE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734878212762-c2s33qb1shla5l4doglhvubrlhaisnp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734878212762:android:c65e654b51f754c23bf523",
+        "android_client_info": {
+          "package_name": "com.hubnusantara.shipyard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734878212762-c2s33qb1shla5l4doglhvubrlhaisnp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEtgtjtg67oZE1HXXO21DOtrdoSKHvorE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734878212762-c2s33qb1shla5l4doglhvubrlhaisnp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

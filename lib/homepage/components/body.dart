@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:layarin_mvp/recommendation_card.dart';
+import 'package:layarin_mvp/homepage/components/recommendation_card.dart';
 import 'header.dart';
 import 'title.dart';
 

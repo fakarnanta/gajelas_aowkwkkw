@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layarin_mvp/homepage/detail_screen.dart';
 import 'package:layarin_mvp/homepage/components/search_bar.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -8,12 +9,11 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Column(
+    return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Expanded(
-              child: SizedBox(
+          SizedBox(
             height: size.height * 0.2,
             child: Stack(children: <Widget>[
               Container(
@@ -29,7 +29,8 @@ class Header extends StatelessWidget {
                         bottomRight: Radius.circular(36))),
                 child: Column(children: <Widget>[
                   const SearchBar(),
-                  Text('Anda bingung mau kemana n/ Kami siap membantu anda',
+                  AutoSizeText(
+                      'Anda bingung mau kemana n/ Kami siap membantu anda',
                       style: Theme.of(context).textTheme.headline5!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   MaterialButton(
@@ -45,7 +46,7 @@ class Header extends StatelessWidget {
                 ]),
               )
             ]),
-          ))
+          )
         ]);
   }
 }
