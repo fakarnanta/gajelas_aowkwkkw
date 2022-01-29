@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:layarin_mvp/homepage/detail_screen.dart';
+import 'package:layarin_mvp/homepage/place_area.dart';
 import 'package:layarin_mvp/homepage/components/search_bar.dart';
 
 class Header extends StatelessWidget {

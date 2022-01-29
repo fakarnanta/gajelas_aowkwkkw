@@ -50,7 +50,7 @@ class TitleWithCustomUnderline extends StatelessWidget {
               height: 7,
               color: Colors.lightBlue.withOpacity(0.2),
             ),
-          )
+          ),
         ],
       ),
     );

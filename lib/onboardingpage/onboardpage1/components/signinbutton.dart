@@ -46,9 +46,9 @@ class SignInButton extends StatelessWidget {
            fontStyle: FontStyle.normal,
            fontWeight: FontWeight.normal
          ),),
-          onPressed: () 
+          onPressed: () {
            signup (context); 
-         )
+          }),
         ),
          Container(
           width: size.width * 0.5,
@@ -80,7 +80,7 @@ final FirebaseAuth auth = FirebaseAuth.instance;
 
 Future<void> signup(BuildContext context) async {
 	final GoogleSignIn googleSignIn = GoogleSignIn();
-	final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+	final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
 	if (googleSignInAccount != null) {
 	final GoogleSignInAuthentication googleSignInAuthentication =
 		await googleSignInAccount.authentication;

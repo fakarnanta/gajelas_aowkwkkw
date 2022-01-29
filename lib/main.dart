@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'layarin',
         theme: ThemeData(
-            fontFamily: 'Cairo',
+            fontFamily: 'plus-jakarta-sans',
             primaryColor: kPrimaryColor,
             textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
             visualDensity: VisualDensity.adaptivePlatformDensity,
