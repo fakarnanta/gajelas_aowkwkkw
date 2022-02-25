@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layarin_mvp/homepage/place_area.dart';
 import 'package:layarin_mvp/constant.dart';
+import 'package:layarin_mvp/homepage/trip_description.dart';
 
 class RecomendsTrip extends StatelessWidget {
   const RecomendsTrip({
@@ -20,7 +21,7 @@ class RecomendsTrip extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ProductDescription(),
+                builder: (context) => TripDescription(),
               ),
             );
           },
@@ -33,7 +34,7 @@ class RecomendsTrip extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ProductDescription(),
+                builder: (context) => TripDescription(),
               ),
             );
           },
@@ -46,7 +47,7 @@ class RecomendsTrip extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ProductDescription(),
+                  builder: (context) => TripDescription(),
                 ));
           },
         )

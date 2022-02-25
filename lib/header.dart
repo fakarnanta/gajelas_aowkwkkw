@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:layarin_mvp/homepage/.dart';
 import 'package:layarin_mvp/homepage/components/search_bar.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:layarin_mvp/homepage/trip_description.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -9,10 +9,9 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Column(
+    return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           SizedBox(
             height: size.height * 0.2,
@@ -29,9 +28,9 @@ class Header extends StatelessWidget {
                         bottomLeft: Radius.circular(36),
                         bottomRight: Radius.circular(36))),
                 child: Column(children: <Widget>[
-                  const SearchBar(),
+                  SearchBar(),
                   AutoSizeText(
-                      'Anda bingung mau kemana /n Kami siap membantu anda',
+                      'Anda bingung mau kemana n/ Kami siap membantu anda',
                       style: Theme.of(context).textTheme.headline5!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold)),
                   MaterialButton(
@@ -65,28 +64,28 @@ class MenuBar extends StatelessWidget {
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal1"))),
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal2"))),
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal3"))),
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal3")))

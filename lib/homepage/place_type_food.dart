@@ -4,6 +4,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:layarin_mvp/homepage/place_area.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:layarin_mvp/homepage/trip_description.dart';
+import 'package:layarin_mvp/detail_screen/naik_kapal_trip_page.dart';
+import 'package:location/location.dart';
 
 class PlaceTypeFood extends StatelessWidget {
   const PlaceTypeFood({Key? key}) : super(key: key);
@@ -25,6 +27,40 @@ class PlaceTypeBody extends StatefulWidget {
 }
 
 class _PlaceTypeBodyState extends State<PlaceTypeBody> {
+  LatLng _initialcameraposition = LatLng(20.5937, 78.9629);
+  late GoogleMapController _controller;
+  final Location _location = Location();
+
+  void _onMapCreated(GoogleMapController _cntlr) {
+    _controller = _cntlr;
+    _location.onLocationChanged.listen((l) {
+      _controller.animateCamera(
+        CameraUpdate.newCameraPosition(
+          CameraPosition(target: LatLng(l.latitude!, l.longitude!), zoom: 15),
+        ),
+      );
+    });
+  }
+
+  void _currentLocation() async {
+    final GoogleMapController controller = await _controller;
+    LocationData currentLocation;
+    var location = Location();
+    try {
+      currentLocation = await location.getLocation();
+    } on Exception {
+      currentLocation = null;
+    }
+
+    controller.animateCamera(CameraUpdate.newCameraPosition(
+      CameraPosition(
+        bearing: 0,
+        target: LatLng(currentLocation.latitude!, currentLocation.longitude!),
+        zoom: 17.0,
+      ),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -124,8 +160,8 @@ class _PlaceTypeBodyState extends State<PlaceTypeBody> {
                       color: Colors.grey[200],
                     ),
                   ),
-                  title: AutoSizeText(),
-                  subtitle: AutoSizeText(data),
+                  title: AutoSizeText('lorem ipdolor amet'),
+                  subtitle: AutoSizeText('lorem ipdolor amet'),
                 )
               ]),
               SizedBox(),
@@ -137,11 +173,12 @@ class _PlaceTypeBodyState extends State<PlaceTypeBody> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
               ),
               Text(
-                _text,
+                'Kota',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
               ),
               GoogleMap(
-                initialCameraPosition: CameraPosition(target: current),
+                initialCameraPosition: CameraPosition(
+                    target: LatLng(l.latitude, l.longitude), zoom: 10),
                 mapType: MapType.normal,
                 myLocationButtonEnabled: false,
               ),

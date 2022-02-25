@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layarin_mvp/homepage/place_area.dart';
 import 'package:layarin_mvp/homepage/components/search_bar.dart';
+import 'package:layarin_mvp/homepage/trip_description.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -63,28 +64,28 @@ class MenuBar extends StatelessWidget {
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => const TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal1"))),
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => const TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal2"))),
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => const TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal3"))),
           IconButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const ProductDescription(),
+                  builder: (context) => const TripDescription(),
                 ));
               },
               icon: const ImageIcon(AssetImage("images/icons/kapal3")))
